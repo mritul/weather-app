@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-wrap">
+      <!--this div is to make bg-img occupy whole viewport hence from header to footer,everything goes inside it-->
+      <header>
+        <input type="text" placeholder="Search for a location..." />
+      </header>
+      <main>
+        <section class="parentContainer">
+          <div>
+            <div class="location">
+              <h1>Mumbai,ID</h1>
+            </div>
+            <div class="date">
+              <h1>Thursday 21 January 2022</h1>
+            </div>
+          </div>
+          <div class="temperature">
+            <h1>15°C</h1>
+          </div>
+          <div>
+            <div class="condition">
+              <h1>Sunny</h1>
+            </div>
+            <div class="hi-lo">
+              <h1>12°C / 19°C</h1>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <h1>
+          Designed and Developed by
+          <a href="https://github.com/mritul" target="_blank">Mritul</a>
+        </h1>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

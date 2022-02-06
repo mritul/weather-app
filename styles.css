@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("image/bg.jpg");
+  background-size: cover;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.app-wrap {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6)
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px auto;
+}
+
+header input {
+  height: 50px;
+  width: 100%;
+  max-width: 280px;
+  font-size: 20px;
+  padding: 10px 5px;
+  border-radius: 10px 0px 10px 0px;
+  border-width: 0;
+  outline: none;
+  border-bottom: solid 6px yellowgreen;
+  background-color: rgb(216, 213, 213);
+  transition: 0.3s ease-out;
+}
+
+header input:focus {
+  background-color: white;
+}
+
+.parentContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0 5px 5px black;
+}
+
+/* Tageting the three sets of text  */
+.parentContainer > div {
+  margin: 25px;
+}
+
+/* Targeting each element of the three sets of text  */
+.parentContainer > div > div {
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 30px;
+}
+
+.date {
+  font-size: 10px;
+}
+
+.temperature {
+  font-size: 40px;
+}
+
+.condition {
+  font-size: 25px;
+}
+
+/* Footer */
+
+footer {
+  font-size: 10px;
+  background-color: transparent;
+  text-align: center;
+  margin-top: 100px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: #00d2ee;
+}
