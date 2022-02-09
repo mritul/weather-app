@@ -41,10 +41,6 @@ let num = x.getDate();
 let month = months[x.getMonth()];
 let day = days[x.getDay()];
 
-console.log(num);
-console.log(month);
-console.log(day);
-
 function getResults() {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${searchBox.value}&appid=${api.key}&units=metric` //Use q=Location instead of latitude and longitude
@@ -52,7 +48,6 @@ function getResults() {
     .then((response) => response.json())
     .then((data) => {
       //data is the JSON object
-      console.log(data.name);
       condition.innerHTML = data.weather[0].main; //See the data object for guiding through the info
       city.innerHTML = data.name;
       temperature.innerHTML = Math.round(data.main.temp) + "°C";
@@ -65,6 +60,9 @@ function getResults() {
       date.innerHTML = `${day}, ${num} ${month}`;
     })
 
-    .catch((err) => alert("Invalid City!"));
+    .catch((err) => {
+      console.error(err);
+      alert("Invalid City!");
+    });
 }
 searchBtn.addEventListener("click", getResults);
